@@ -163,4 +163,15 @@ public class CoordinateValidator {
         }
         return secondCoordinate;
     }
+
+    public boolean isShotValid(String shot) {
+        firstCoordinate = new Coordinate(shot);
+
+        boolean isValidLetter = firstCoordinate.getLetterPosition() >= 0 && firstCoordinate.getLetterPosition() <= 9;
+        boolean isValidDigit = firstCoordinate.getDigitPosition() >= 0 && firstCoordinate.getDigitPosition() <= 9;
+
+        return isValidLetter && isValidDigit;
+    }
+
+
 }

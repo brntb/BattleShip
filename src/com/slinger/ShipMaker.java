@@ -130,4 +130,5 @@ public class ShipMaker {
         board.addShip(destroyer);
         board.printBoard();
     }
+
 }

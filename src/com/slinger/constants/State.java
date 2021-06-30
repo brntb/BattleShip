@@ -3,7 +3,8 @@ package com.slinger.constants;
 public enum State {
     FOG("~"),
     OCCUPIED("O"),
-    HIT("X");
+    HIT("X"),
+    MISS("M");
 
     private final String symbol;
 
