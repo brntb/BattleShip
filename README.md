@@ -1,5 +1,5 @@
 # HyperSkill-BattleShip
-# Stage 1/5
+# Stage 2/5
 # Description
 
 Description
