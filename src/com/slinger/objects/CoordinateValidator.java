@@ -3,7 +3,7 @@ package com.slinger.objects;
 
 import com.slinger.constants.ShipType;
 
-//helper class to validate coordinates
+//helper class to validate coordinates when making ship and when taking a shot at a ship
 public class CoordinateValidator {
 
     private final Board board;
@@ -172,6 +172,7 @@ public class CoordinateValidator {
 
         return isValidLetter && isValidDigit;
     }
+
 
 
 }

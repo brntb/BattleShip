@@ -1,37 +1,24 @@
 package com.slinger;
 
-
-
 import com.slinger.constants.ShipType;
-import com.slinger.objects.Board;
 import com.slinger.objects.CoordinateValidator;
 import com.slinger.ships.*;
-import com.slinger.ships.Ship;
+
 import java.util.Scanner;
 
 //class makes all 5 ships
 public class ShipMaker {
 
-    private final Board board;
     private final CoordinateValidator validator;
     private final Scanner scanner;
 
-    public ShipMaker(Board board, CoordinateValidator validator, Scanner scanner) {
-        this.board = board;
+    public ShipMaker(CoordinateValidator validator, Scanner scanner) {
         this.validator = validator;
         this.scanner = scanner;
     }
 
-    public void makeShips() {
-        makeAircraftCarrier();
-        makeBattleship();
-        makeSubmarine();
-        makeCruiser();
-        makeDestroyer();
-    }
 
-
-    private void makeAircraftCarrier() {
+    public Ship makeAircraftCarrier() {
         Ship aircraft;
 
         System.out.println("\nEnter the coordinates of the Aircraft Carrier (5 cells):\n");
@@ -47,11 +34,10 @@ public class ShipMaker {
 
         }
 
-        board.addShip(aircraft);
-        board.printBoard();
+        return aircraft;
     }
 
-    private void makeBattleship() {
+    public Ship makeBattleship() {
         Ship battleShip;
 
         System.out.println("\nEnter the coordinates of the BattleShip Carrier (4 cells):\n");
@@ -67,11 +53,10 @@ public class ShipMaker {
 
         }
 
-        board.addShip(battleShip);
-        board.printBoard();
+        return battleShip;
     }
 
-    private void makeSubmarine() {
+    public Ship makeSubmarine() {
         Ship submarine;
 
         System.out.println("\nEnter the coordinates of the Submarine (3 cells):\n");
@@ -87,11 +72,10 @@ public class ShipMaker {
 
         }
 
-        board.addShip(submarine);
-        board.printBoard();
+        return submarine;
     }
 
-    private void makeCruiser() {
+    public Ship makeCruiser() {
         Ship cruiser;
 
         System.out.println("\nEnter the coordinates of the Cruiser (3 cells):\n");
@@ -107,11 +91,10 @@ public class ShipMaker {
 
         }
 
-        board.addShip(cruiser);
-        board.printBoard();
+        return cruiser;
     }
 
-    private void makeDestroyer() {
+    public Ship makeDestroyer() {
         Ship destroyer;
 
         System.out.println("\nEnter the coordinates of the Destroyer (2 cells):\n");
@@ -127,8 +110,6 @@ public class ShipMaker {
 
         }
 
-        board.addShip(destroyer);
-        board.printBoard();
+        return destroyer;
     }
-
 }

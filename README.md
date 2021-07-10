@@ -1,66 +1,62 @@
 # HyperSkill-BattleShip
-# Stage 2/5
+# Stage 5/5
 # Description
 
-Description
+Here is a good way to show off your new skills: offer a friend to play a computer game that you wrote yourself! Of course, it is much more fun to play Battleship with someone else: the possibility of winning or losing adds a thrill to the game!
 
-The goal of this game is to sink all the ships of your opponent. Our fleet is not ready for a big battle yet, so let's practice shooting on our field. Place all your units on the battlefield and take a shot!
-
-In this step, you need to develop a system of shooting with accompanying messages about hits and misses.
+Both players add the ships to their fields one by one (no peeking!), and then start shelling each other until one of them succeeds. To make the game fair and prevent the players from peeping at each other's fields, after each move add the message "Press Enter and pass the move to another player", which will clear the screen.
 Objectives
 
-Take a shot at a prepared game field. You need to indicate the coordinates of the target, and the program should then display a message about a hit or a miss. If the shell misses the target and falls in the water, this cell should be marked with an M, and a successful strike is marked by an X. After this shot, the game should be stopped.
-
-If the player managed to hit a ship, the game should display a message You hit a ship!; otherwise, the message is You missed!
-Examples
+To complete this stage and the entire project, add a PvP component to your game. Now the player will see not only the opponent's screen but their own as well. Place the opponent's screen at the top and your field at the bottom.
+Example
 
 The greater-than symbol followed by a space (> ) represents the user input. Notice that it's not part of the input.
 
-Example 1:
+Player 1, place your ships on the game field
 
-  1 2 3 4 5 6 7 8 9 10 <br>
-A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Enter the coordinates of the Aircraft Carrier (5 cells):
 
 > F3 F7
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O O ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Enter the coordinates of the Battleship (4 cells):
 
 > A1 D1
 
-  1 2 3 4 5 6 7 8 9 10 <br>
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
+  1 2 3 4 5 6 7 8 9 10
+A O ~ ~ ~ ~ ~ ~ ~ ~ ~
+B O ~ ~ ~ ~ ~ ~ ~ ~ ~
+C O ~ ~ ~ ~ ~ ~ ~ ~ ~
+D O ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O O ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 Enter the coordinates of the Submarine (3 cells):
 
@@ -70,17 +66,17 @@ Error! Wrong length of the Submarine! Try again:
 
 > J10 J8
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ ~ ~ ~ ~ ~ ~ O O O<br>
+  1 2 3 4 5 6 7 8 9 10
+A O ~ ~ ~ ~ ~ ~ ~ ~ ~
+B O ~ ~ ~ ~ ~ ~ ~ ~ ~
+C O ~ ~ ~ ~ ~ ~ ~ ~ ~
+D O ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O O ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ O O O
 
 Enter the coordinates of the Cruiser (3 cells):
 
@@ -90,17 +86,17 @@ Error! Wrong ship location! Try again:
 
 > B9 D9
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ ~ ~ ~ ~ ~ ~ O O O<br>
+  1 2 3 4 5 6 7 8 9 10
+A O ~ ~ ~ ~ ~ ~ ~ ~ ~
+B O ~ ~ ~ ~ ~ ~ ~ O ~
+C O ~ ~ ~ ~ ~ ~ ~ O ~
+D O ~ ~ ~ ~ ~ ~ ~ O ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O O ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ O O O
 
 Enter the coordinates of the Destroyer (2 cells):
 
@@ -110,87 +106,160 @@ Error! You placed it too close to another one. Try again:
 
 > I2 J2
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ O ~ ~ ~ ~ ~ O O O<br>
+  1 2 3 4 5 6 7 8 9 10
+A O ~ ~ ~ ~ ~ ~ ~ ~ ~
+B O ~ ~ ~ ~ ~ ~ ~ O ~
+C O ~ ~ ~ ~ ~ ~ ~ O ~
+D O ~ ~ ~ ~ ~ ~ ~ O ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O O ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ O ~ ~ ~ ~ ~ ~ ~ ~
+J ~ O ~ ~ ~ ~ ~ O O O
 
-The game starts!
+Press Enter and pass the move to another player
+...
+Player 2, place your ships to the game field
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ O ~ ~ ~ ~ ~ O O O<br>
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-Take a shot!
+Enter the coordinates of the Aircraft Carrier (5 cells):
+
+> H2 H6
+
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ O O O O O ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Enter the coordinates of the Battleship (4 cells):
+
+> F3 F6
+
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O ~ ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ O O O O O ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Enter the coordinates of the Submarine (3 cells):
+
+> H8 F8
+
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O ~ O ~ ~
+G ~ ~ ~ ~ ~ ~ ~ O ~ ~
+H ~ O O O O O ~ O ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+...
+
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ O ~ ~
+D ~ ~ ~ O O O ~ O ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O ~ O ~ ~
+G ~ ~ ~ ~ ~ ~ ~ O ~ ~
+H ~ O O O O O ~ O ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Press Enter and pass the move to another player
+...
+
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+---------------------
+  1 2 3 4 5 6 7 8 9 10
+A O ~ ~ ~ ~ ~ ~ ~ ~ ~
+B O ~ ~ ~ ~ ~ ~ ~ O ~
+C O ~ ~ ~ ~ ~ ~ ~ O ~
+D O ~ ~ ~ ~ ~ ~ ~ O ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O O ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ O ~ ~ ~ ~ ~ ~ ~ ~
+J ~ O ~ ~ ~ ~ ~ O O O
+
+Player 1, it's your turn:
+
+> I3
+
+You missed!
+Press Enter and pass the move to another player
+...
+
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+D ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+---------------------
+  1 2 3 4 5 6 7 8 9 10
+A ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+B ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+C ~ ~ ~ ~ ~ ~ ~ O ~ ~
+D ~ ~ ~ O O O ~ O ~ ~
+E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+F ~ ~ O O O O ~ O ~ ~
+G ~ ~ ~ ~ ~ ~ ~ O ~ ~
+H ~ O O O O O ~ O ~ ~
+I ~ ~ M ~ ~ ~ ~ ~ ~ ~
+J ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Player 2, it's your turn:
 
 > A1
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A X ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ O ~ ~ ~ ~ ~ O O O<br>
-
 You hit a ship!
-
- 
-
-Example 2:
-
+Press Enter and pass the move to another player
 ...
-The game starts!
 
-  1 2 3 4 5 6 7 8 9 10<br>
-A O ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ O ~ ~ ~ ~ ~ O O O<br>
-
-Take a shot!
-
-> Z1
-
-Error! You entered the wrong coordinates! Try again:
-
-> A2
-
-  1 2 3 4 5 6 7 8 9 10<br>
-A O M ~ ~ ~ ~ ~ ~ ~ ~<br>
-B O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-C O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-D O ~ ~ ~ ~ ~ ~ ~ O ~<br>
-E ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-F ~ ~ O O O O O ~ ~ ~<br>
-G ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-H ~ ~ ~ ~ ~ ~ ~ ~ ~ ~<br>
-I ~ O ~ ~ ~ ~ ~ ~ ~ ~<br>
-J ~ O ~ ~ ~ ~ ~ O O O<br>
-
-You missed!
